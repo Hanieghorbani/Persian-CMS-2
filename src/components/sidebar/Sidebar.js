@@ -1,110 +1,172 @@
 import React from "react"
 import "./Sidebar.css"
-import LineStyleIcon from "@mui/icons-material/LineStyle"
-import TimelineIcon from "@mui/icons-material/Timeline"
-import TrendingUpIcon from "@mui/icons-material/TrendingUp"
-import PermIdentityIcon from "@mui/icons-material/PermIdentity"
 import StorefrontIcon from "@mui/icons-material/Storefront"
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney"
-import BarChartIcon from "@mui/icons-material/BarChart"
-import MailOutlineIcon from "@mui/icons-material/MailOutline"
-import DynamicFeedIcon from "@mui/icons-material/DynamicFeed"
-import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline"
-import MessageOutlinedIcon from "@mui/icons-material/MessageOutlined"
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline"
-import ReportIcon from "@mui/icons-material/WorkOutline"
-
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft"
+import HomeIcon from "@mui/icons-material/Home"
+import AppsIcon from "@mui/icons-material/Apps"
+import WidgetsIcon from "@mui/icons-material/Widgets"
+import ContentPasteIcon from "@mui/icons-material/ContentPaste"
+import LayersIcon from "@mui/icons-material/Layers"
+import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline"
+import LockIcon from "@mui/icons-material/Lock"
+import { Accordion } from "react-bootstrap"
 import { Link } from "react-router-dom"
 export default function Sidebar() {
   return (
-    <div className=" sidebar">
-      <div className="mb-3">
-        <h6>Dashboard</h6>
-        <ul>
-          <Link to={"/"} className='link'>
-            <li className="active">
-              <LineStyleIcon />
-              Home
-            </li>
-          </Link>
-          <li>
-            <TimelineIcon />
-            Analytics
-          </li>
-          <li>
-            <TrendingUpIcon />
-            Sales
-          </li>
-        </ul>
-      </div>
+    <div className="sidebar">
+      <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>
+            <HomeIcon />
+            داشبورد
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <Link to={"/sales"}>
+                <li>فروش ها</li>
+              </Link>
+              <Link to={"/analyze"}>
+                <li>تجزیه و تحلیل</li>
+              </Link>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>
+            <LayersIcon />
+            جداول داده
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <Link to={"/datasTable"}>
+                <li>پایه ای</li>
+              </Link>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
 
-      <div className="mb-3">
-        <h6>Quick Menu</h6>
-        <ul>
-          <Link to={"/users"} className='link'>
-            <li>
-              <PermIdentityIcon />
-              Users
-            </li>
-          </Link>
-          <Link to={"/newUser"} className='link'>
-            <li>
-              <StorefrontIcon />
-              New User
-            </li>
-          </Link>
-          <Link to={"/products"} className='link'>
-            <li>
-              <AttachMoneyIcon />
-              Products
-            </li>
-          </Link>
-          <li>
-            <BarChartIcon />
-            Transactions
-          </li>
-          <li>
-            <MailOutlineIcon />
-            Reports
-          </li>
-        </ul>
-      </div>
+        <Accordion.Item eventKey="2">
+          <Accordion.Header>
+            <PeopleOutlineIcon />
+            کاربران
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <Link to={"/profile"}>
+                <li>پروفایل</li>
+              </Link>
+              <Link to={"/settingAccount"}>
+                <li>تنظیمات اکانت</li>
+              </Link>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
 
-      <div className="mb-3">
-        <h6>Notifications</h6>
-        <ul>
-          <li>
-            <MailOutlineIcon />
-            Mail
-          </li>
-          <li>
-            <DynamicFeedIcon />
-            Feedback
-          </li>
-          <li>
-            <ChatBubbleOutlineIcon />
-            Messages
-          </li>
-        </ul>
-      </div>
+        <Accordion.Item eventKey="3">
+          <Accordion.Header>
+            <LockIcon />
+            احراز هویت
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <Link to={"/login"}>
+                <li>ورود</li>
+              </Link>
+              <Link to={"/register"}>
+                <li>ثبت نام</li>
+              </Link>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
 
-      <div className="mb-3">
-        <h6>Staff</h6>
-        <ul>
-          <li>
+        <Accordion.Item eventKey="4">
+          <Accordion.Header>
+            <AppsIcon />
+            برنامه ها
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>مخاطبین</li>
+              <li>یادداشت</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="5">
+          <Accordion.Header>
+            <ContentPasteIcon />
+            ابزارک ها
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>لورم</li>
+              <li>ایپسوم</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="6">
+          <Accordion.Header>
+            <WidgetsIcon />
+            اجزا
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>زبانه ها</li>
+              <li>کارت ها</li>
+              <li>پیشخوان</li>
+              <li>کاروسول</li>
+              <li>شمارش معکوس</li>
+              <li>مسدود کردن کاربر</li>
+              <li>مودال ها</li>
+              <li>پایان جلسه</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="7">
+          <Accordion.Header>
             <WorkOutlineIcon />
-            Manage
-          </li>
-          <li>
-            <TimelineIcon />
-            Analytics
-          </li>
-          <li>
-            <ReportIcon />
-            Reports
-          </li>
-        </ul>
-      </div>
+            عناصر
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>هشدارها</li>
+              <li>نشانها</li>
+              <li>دکمه ها</li>
+              <li>کشویی</li>
+              <li>لودر</li>
+              <li>جعبه اطلاعات</li>
+              <li>آواتارها</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>
+            <StorefrontIcon />
+            صفحات
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>راهنما</li>
+              <li>فرم تماس</li>
+              <li>سوالات متداول</li>
+              <li>2 فرم تماس</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   )
 }

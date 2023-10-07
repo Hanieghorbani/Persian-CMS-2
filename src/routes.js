@@ -1,14 +1,22 @@
-// import Home from "./pages/home/Home"
-// import UserList from "./pages/users/UserList"
-// import NewUser from "./pages/newUser/NewUser"
-// import Products from "./pages/products/Products"
-// import Product from "./pages/product/Product"
+import Sales from "./pages/sales/Sales"
+import Analyze from './pages/analyze/Analyze'
+import Notes from './pages/notes/Notes'
+import Contacts from './pages/contacts/Contacts'
+import DatasTable from './pages/datasTable/DatasTable'
+import Profile from './pages/profile/Profile'
+import SettingAccount from './pages/setting-account/SettingAccount'
+import Login from './pages/login/Login'
+import Register from './pages/register/Register'
 let routes = [
-    // {path:'/',element:<Home/>},
-    // {path:'/users',element:<UserList/>},
-    // {path:'/newUser',element:<NewUser/>},
-    // {path:'/products',element:<Products/>},
-    // {path:'/product/:productID',element:<Product/>},
+    {path:'/',element:<Sales/>},
+    {path:'/analyze',element:<Analyze/>},
+    {path:'/notes',element:<Notes/>},
+    {path:'/Contacts',element:<Contacts/>},
+    {path:'/datasTable',element:<DatasTable/>},
+    {path:'/profile',element:<Profile/>},
+    {path:'/settingAccount',element:<SettingAccount/>},
+    {path:'/login',element:<Login/>},
+    {path:'/register',element:<Register/>},
 ]
 
 export default routes

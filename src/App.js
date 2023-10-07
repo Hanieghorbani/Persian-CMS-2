@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <TopBar />
-      <div className="px-4 d-flex">
+      <div className="d-flex justify-content-between">
         <Sidebar/>
         {routers}
       </div>

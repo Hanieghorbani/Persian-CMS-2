@@ -1,36 +1,77 @@
-.sidebar{
+.sidebar {
     position: sticky;
+    right: 0;
     /* top: 100px; */
-    /* border-right: 1px solid gray; */
-    padding-right: 50px;
+    /* border-left: 1px solid gray; */
     width: 20%;
+    direction: rtl;
+    padding-left: 10px;
 }
 
-.sidebar h6{
+.accordion-item{
+    border: none !important;
+}
+
+.accordion-item,
+.accordion-header button{
+    background: #212529 !important;
+    color: aliceblue;
+    transition: all 0.4s ease;
+}
+.accordion-header button:hover{
+    background: #59585854 !important;
+}
+.accordion-button {
+    border: none !important;
+    color: aliceblue !important;
+    box-shadow: none !important;
+}
+
+.arrow{
+    transition: all 0.4s ease;
+    position: absolute;
+    left: 1rem;
+}
+
+.accordion-button.collapsed .arrow{
+    transform: rotate(-90deg);
+}
+
+.accordion-button::after {
+    position: absolute;
+    left: 20px;
+    color: aliceblue !important;
+    opacity: 0;
+}
+
+.accordion-header svg{
+    margin-left: 12px;
+}
+
+.sidebar h6 {
     color: rgb(189, 189, 189);
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
-.sidebar ul{
+.sidebar ul {
     margin-left: -20px;
 }
 
-.sidebar li{
+.sidebar li {
     cursor: pointer;
     list-style: none;
-    color: gray;
-    font-size: .9rem;
+    color: rgb(208, 208, 208);
+    font-size: 0.9rem;
     border-radius: 10px;
     padding: 5px;
     transition: all 0.2s ease;
 }
 
-.sidebar li:hover, .sidebar li.active{
-    background: rgb(211, 236, 248);
-    border-radius: 10px;
-    padding: 5px;
+.sidebar li:hover,
+.sidebar li.active {
+    color: rgb(11, 164, 52);
 }
 
-.link{
+.sidebar a {
     text-decoration: none;
 }

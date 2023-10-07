@@ -1,0 +1,36 @@
+.sidebar{
+    position: sticky;
+    /* top: 100px; */
+    /* border-right: 1px solid gray; */
+    padding-right: 50px;
+    width: 20%;
+}
+
+.sidebar h6{
+    color: rgb(189, 189, 189);
+    font-size: .8rem;
+}
+
+.sidebar ul{
+    margin-left: -20px;
+}
+
+.sidebar li{
+    cursor: pointer;
+    list-style: none;
+    color: gray;
+    font-size: .9rem;
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+
+.sidebar li:hover, .sidebar li.active{
+    background: rgb(211, 236, 248);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.link{
+    text-decoration: none;
+}

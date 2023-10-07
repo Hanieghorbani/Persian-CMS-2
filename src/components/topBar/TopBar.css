@@ -1,0 +1,65 @@
+.topbar{
+  direction: rtl;
+}
+.topbar input{
+  padding: 10px !important;
+
+}
+.inputBox{
+  background: rgb(66, 66, 66) ;
+  border-radius: 10px; 
+  padding: 0 !important;
+}
+
+.topbar input:focus{
+  border-bottom: none !important;
+  outline: none;
+}
+.topbar input::placeholder, .topbar input{
+  color: rgb(230, 230, 230);
+  font-size: 20px;
+}
+
+.topbarLeft .lang{
+   width: 25px;
+   cursor: pointer;
+}
+
+.topbarLeft .logo{
+  width: 90px;
+}
+
+.topbarLeft svg{
+  cursor: pointer;;
+}
+
+.logo{
+    width: 130px;
+    cursor: pointer;
+}
+
+.profile{
+  width: 60px;
+  cursor: pointer;
+}
+
+.icons-topbar div{
+    position: relative;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.icons-topbar span{
+   position: absolute;
+   top: -2px;
+   left: 12px;
+   background: rgb(234, 83, 83);
+   color: white;
+   border-radius: 50%;
+   width: 15px;
+   height: 15px;
+   font-size: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} 

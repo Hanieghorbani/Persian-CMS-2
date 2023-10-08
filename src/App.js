@@ -8,10 +8,13 @@ export default function App() {
   return (
     <div className="App">
       <TopBar />
-      <div className="d-flex justify-content-between">
+      <div className="d-flex">
         <Sidebar/>
         {routers}
       </div>
     </div>
   )
 }
+
+
+ 

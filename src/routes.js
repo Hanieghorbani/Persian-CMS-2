@@ -8,7 +8,7 @@ import SettingAccount from './pages/setting-account/SettingAccount'
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
 let routes = [
-    {path:'/',element:<Sales/>},
+    {path:'/sales',element:<Sales/>},
     {path:'/analyze',element:<Analyze/>},
     {path:'/notes',element:<Notes/>},
     {path:'/Contacts',element:<Contacts/>},

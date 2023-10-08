@@ -14,8 +14,10 @@
 
 .accordion-item,
 .accordion-header button{
-    background: #212529 !important;
-    color: aliceblue;
+    /* background: #212529 !important; */
+    background: #060818 !important;
+    /* color: aliceblue; */
+    color: #506690;
     transition: all 0.4s ease;
 }
 .accordion-header button:hover{

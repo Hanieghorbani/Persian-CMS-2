@@ -166,6 +166,66 @@ export default function Sidebar() {
             </ul>
           </Accordion.Body>
         </Accordion.Item>
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>
+            <StorefrontIcon />
+            صفحات
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>راهنما</li>
+              <li>فرم تماس</li>
+              <li>سوالات متداول</li>
+              <li>2 فرم تماس</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>
+            <StorefrontIcon />
+            صفحات
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>راهنما</li>
+              <li>فرم تماس</li>
+              <li>سوالات متداول</li>
+              <li>2 فرم تماس</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>
+            <StorefrontIcon />
+            صفحات
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>راهنما</li>
+              <li>فرم تماس</li>
+              <li>سوالات متداول</li>
+              <li>2 فرم تماس</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="8">
+          <Accordion.Header>
+            <StorefrontIcon />
+            صفحات
+            <KeyboardArrowLeftIcon className="arrow" />
+          </Accordion.Header>
+          <Accordion.Body>
+            <ul>
+              <li>راهنما</li>
+              <li>فرم تماس</li>
+              <li>سوالات متداول</li>
+              <li>2 فرم تماس</li>
+            </ul>
+          </Accordion.Body>
+        </Accordion.Item>
       </Accordion>
     </div>
   )

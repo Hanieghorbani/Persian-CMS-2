@@ -1,11 +1,31 @@
 .sidebar {
     position: sticky;
-    right: 0;
-    /* top: 100px; */
+    top: 82px;
     /* border-left: 1px solid gray; */
     width: 20%;
-    direction: rtl;
+    direction: ltr;
     padding-left: 10px;
+    height: 90vh;
+    overflow-y: scroll;
+    margin-right: 10px;
+}
+
+.sidebar::-webkit-scrollbar{
+    width: 2px;
+}
+
+.sidebar::-webkit-scrollbar-track{
+    border-radius: 10px;
+    background: #060818;
+}
+.sidebar::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: whitesmoke;
+}
+.sidebar .accordion{
+    direction: rtl;
+    position: sticky;
+    top: 0;
 }
 
 .accordion-item{

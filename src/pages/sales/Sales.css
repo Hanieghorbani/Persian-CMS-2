@@ -1,0 +1,109 @@
+.sales .col-4:nth-child(2) p {
+    font-size: 14px;
+}
+
+.sales .col-4:nth-child(2) {
+    background: #0e1726;
+}
+.row2 .infoChart {
+    background: #1b55e2;
+}
+
+.gradientBoxIncome {
+    height: 7px;
+    background: linear-gradient(to left, rgb(138, 88, 203) 10%, rgb(140, 32, 140) 60%);
+}
+
+.sales .bagIcon,
+.sales .tagIcon,
+.sales .cartIcon,
+.sales .basketIcon {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.sales .bagIcon {
+    background: purple;
+}
+
+.gradientBoxProfit {
+    height: 7px;
+    background: linear-gradient(to left, rgb(147, 215, 144), rgb(15, 148, 26));
+}
+
+.sales .tagIcon {
+    background: green;
+}
+.gradientBoxCosts {
+    height: 7px;
+    background: linear-gradient(to left, rgb(253, 186, 120), rgb(255, 140, 32));
+}
+
+.sales .cartIcon {
+    background: rgb(237, 110, 13);
+}
+
+.row3 .col-5 > div,
+.row3 .col-3,
+.row3 .col-4 > div {
+    background: #0e1726;
+}
+
+.basketIcon {
+    font-size: 55px !important;
+    background: rgb(155, 211, 253);
+    color: rgb(71, 71, 251);
+}
+
+.row3 .col-5 p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.row3 .col-5 > div > div > div {
+    border: 1px dashed white;
+    /* padding-right: 10px !important; */
+}
+
+.row3 .arrowDown {
+    transform: rotate(-90deg);
+}
+
+.row3 .col-3 p {
+    font-size: 12px;
+}
+
+.row3 .col-3 p:nth-child(1) {
+    width: 55%;
+}
+.row3 .col-3 p span {
+    font-size: 20px;
+}
+
+.row3 .recentActs {
+    overflow-y: scroll;
+    height: 300px;
+    direction: ltr;
+}
+
+.row3 .recentActs > div {
+    direction: rtl;
+    padding: 10px;
+}
+
+.row3 .recentActs::-webkit-scrollbar {
+    width: 3px;
+}
+
+.row3 .recentActs::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgb(71, 71, 71);
+}
+.row3 .recentActs::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(140, 140, 140);
+}

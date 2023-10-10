@@ -1,0 +1,7 @@
+.piChart{
+    background: #0e1726;
+}
+
+.guidancePiChart span:nth-child(1){
+color: rgb(92, 26, 195);
+}

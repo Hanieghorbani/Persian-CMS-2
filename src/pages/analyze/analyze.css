@@ -1,0 +1,33 @@
+.analyze .row1 .col-5 > div,
+.analyze .row1 .col-4 > div {
+  background: #0e1726;
+}
+
+.analyze .row1 .col-5 > div p {
+  font-size: 13px;
+  margin-bottom: -3px;
+  font-weight: bold;
+}
+
+.analyze .row1 .col-5 > div h4 {
+  text-shadow: 1px 3px 5px rgb(230, 74, 74);
+}
+
+.analyze .row1 .gradient {
+  height: 15px;
+  background: linear-gradient(to left, rgb(67, 174, 198), rgb(105, 46, 225));
+}
+
+.analyze .row1 .col-4 svg {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 50px;
+  background: rgb(105, 46, 225);
+}
+
+.analyze .row1 .col-3 > div{
+  background: linear-gradient(to left, rgb(38, 53, 56), rgb(142, 168, 116));
+}

@@ -10,7 +10,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward"
 import "./Sales.css"
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft"
-
+import ScrollBox from "../../components/scrollBox/ScrollBox"
 import {
   AreaChart,
   Area,
@@ -22,7 +22,8 @@ import {
 } from "recharts"
 
 import { infoChartInRow3 } from "../../datas"
-
+import Analogy from "../../components/analogy/Analogy"
+import SimpleChart from "../../components/simpleChart/SimpleChart"
 export default function Sales() {
   return (
     <div className="sales w-100 p-4">
@@ -39,46 +40,18 @@ export default function Sales() {
           <BarCharts />
         </div>
         <div className="col-4 text-white p-4 rounded pb-0">
-          <h5 className="mb-5">خلاصه</h5>
-          <div className="d-flex align-items-center">
-            <ShoppingBagIcon className="bagIcon" />
-            <div className="w-100 me-3">
-              <div className="d-flex justify-content-between align-items-center w-100 text-secondary fw-bold">
-                <p>درآمد</p>
-                <p>92600 تومان</p>
-              </div>
-              <div className="bg-dark w-100 rounded-pill">
-                <div className="gradientBoxIncome w-75 rounded-pill"></div>
-              </div>
-            </div>
-          </div>
-          <div className="d-flex align-items-center my-4">
-            <LocalOfferIcon className="tagIcon bg-gradient" />
-            <div className="w-100 me-3">
-              <div className="d-flex justify-content-between align-items-center w-100 text-secondary fw-bold">
-                <p>سود</p>
-                <p>2340 تومان</p>
-              </div>
-              <div className="bg-dark w-100 rounded-pill">
-                <div className="gradientBoxProfit w-25 rounded-pill"></div>
-              </div>
-            </div>
-          </div>
-          <div className="d-flex align-items-center">
-            <CreditCardIcon className="cartIcon bg-gradient" />
-            <div className="w-100 me-3">
-              <div className="d-flex justify-content-between align-items-center w-100 text-secondary fw-bold">
-                <p>هزینه ها</p>
-                <p>5400 تومان</p>
-              </div>
-              <div className="bg-dark w-100 rounded-pill">
-                <div className="gradientBoxCosts w-50 rounded-pill"></div>
-              </div>
-            </div>
-          </div>
+          <Analogy
+            title="خلاصه"
+            key1="درآمد"
+            key2="سود"
+            key3="هزینه ها"
+            value1="92600 تومان"
+            value2="37500 تومان"
+            value3="550000 تومان"
+          />
         </div>
         <div className="col-4">
-          <div className="infoChart rounded pt-1">
+          {/* <div className="infoChart rounded pt-1">
             <dir
               className="d-flex align-items-center p-3"
               //  style={{marginLeft:'-30px'}}
@@ -123,7 +96,8 @@ export default function Sales() {
                 />
               </AreaChart>
             </ResponsiveContainer>
-          </div>
+          </div> */}
+        <SimpleChart title='کل سفارشات' value='4,200' color='white' height={200}/>
         </div>
       </div>
 
@@ -203,7 +177,7 @@ export default function Sales() {
           </div>
         </div>
         <div className="col-3 rounded">
-          <h5 className="text-white p-4">فعالیت های اخیر</h5>
+          {/* <h5 className="text-white p-4">فعالیت های اخیر</h5>
           <div className="recentActs">
             <div className="d-flex align-items-center justify-content-between">
               <p className="d-flex align-items-center text-secondary fw-bold">
@@ -275,7 +249,8 @@ export default function Sales() {
               </p>
               <p className="text-secondary">همین الان</p>
             </div>
-          </div>
+          </div> */}
+          <ScrollBox title="فعالیت های اخیر" />
           <button className="btn text-info w-100 m-auto">
             مشاهده همه <KeyboardArrowLeftIcon className="arrowDown" />
           </button>

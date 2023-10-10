@@ -1,0 +1,7 @@
+.valueinLeft{
+    margin-right: -5px;
+}
+
+.valueinLeft p span {
+    color: rgb(98, 182, 24);
+}

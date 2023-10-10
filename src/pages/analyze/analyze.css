@@ -1,5 +1,9 @@
 .analyze .row1 .col-5 > div,
-.analyze .row1 .col-4 > div {
+.analyze .row1 .col-4 > div,
+.analyze .row2 .col-9 > div,
+.analyze .row2 .col-3 > div,
+.analyze .infoChart
+{
   background: #0e1726;
 }
 
@@ -28,6 +32,15 @@
   background: rgb(105, 46, 225);
 }
 
-.analyze .row1 .col-3 > div{
+.analyze .row1 .col-3 > div {
   background: linear-gradient(to left, rgb(38, 53, 56), rgb(142, 168, 116));
+}
+
+.analyze .recharts-cartesian-axis-tick text {
+  fill: gray !important;
+  font-size: 14px !important;
+}
+
+.analyze .row2 .recharts-rectangle {
+  border-radius: 10px !important;
 }

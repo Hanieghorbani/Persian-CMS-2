@@ -1,0 +1,35 @@
+
+.scrollBox p {
+    font-size: 12px;
+}
+
+.scrollBox p:nth-child(1) {
+    width: 55%;
+}
+.scrollBox p span {
+    font-size: 20px;
+}
+
+.scrollBox .recentActs {
+    overflow-y: scroll;
+    height: 300px;
+    direction: ltr;
+}
+
+.scrollBox .recentActs > div {
+    direction: rtl;
+    padding: 10px;
+}
+
+.scrollBox .recentActs::-webkit-scrollbar {
+    width: 3px;
+}
+
+.scrollBox .recentActs::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgb(71, 71, 71);
+}
+.scrollBox .recentActs::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(140, 140, 140);
+}

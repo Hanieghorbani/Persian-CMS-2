@@ -19,7 +19,8 @@ export default function LineCharts(props) {
               strokeWidth={2}
               dot={false}
             />
-            <Tooltip labelStyle={{display:'none'}}  contentStyle={{
+            <Tooltip labelStyle={{display:'none'}}
+              contentStyle={{
                     background: "#0e1735",
                     border: "none",
                     color: "white",

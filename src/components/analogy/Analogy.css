@@ -1,0 +1,36 @@
+.gradientBoxIncome {
+    height: 7px;
+    background: linear-gradient(to left, rgb(138, 88, 203) 10%, rgb(140, 32, 140) 60%);
+}
+
+.bagIcon,
+.tagIcon,
+.cartIcon,
+.basketIcon {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px !important;
+}
+.bagIcon {
+    background: purple;
+}
+
+.gradientBoxProfit {
+    height: 7px;
+    background: linear-gradient(to left, rgb(147, 215, 144), rgb(15, 148, 26));
+}
+
+.tagIcon {
+    background: green;
+}
+.gradientBoxCosts {
+    height: 7px;
+    background: linear-gradient(to left, rgb(253, 186, 120), rgb(255, 140, 32));
+}
+
+.cartIcon {
+    background: rgb(237, 110, 13);
+}

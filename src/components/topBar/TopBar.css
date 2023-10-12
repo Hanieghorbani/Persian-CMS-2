@@ -1,11 +1,11 @@
 .topbar{
   direction: rtl;
 }
-.topbar input{
+.topbar input,
+.datasTable input{
   padding: 10px !important;
-
 }
-.inputBox{
+.topbar .inputBox{
   background: #0e1726 ;
   border-radius: 10px; 
   padding: 0 !important;

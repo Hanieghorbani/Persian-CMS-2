@@ -237,4 +237,129 @@ let piChartInSalesDatas = [
     },
     
 ]
-export {chartInSalesDatas,piChartInSalesDatas,barChartInSalesDatas,infoChartInRow3,lineChartInfos,chartInAnalyzeRow2Datas}
+
+const rowsMUI = [
+  {
+    id: 1,
+    position: "	توسعه دهنده Javascript",
+    firstName: "یوری بویکا",
+    age: 35,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 2,
+    position: "مدیر منطقه",
+    firstName: "گلوریا",
+    age: 42,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 3,
+    position: "سر پرسنل",
+    firstName: "گاوین",
+    age: 45,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 4,
+    position: "طراح ارشد بازاریابی",
+    firstName: "مینا طالبی",
+    age: 16,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 5,
+    position: "توسعه دهنده ارشد Javascript",
+    firstName: "مهسا سیامکی",
+    age: 20,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 6,
+    position: "طراح بازاریابی",
+    firstName: "مهدی یراحی",
+    age: 150,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 7,
+    position: "	متخصص ادغام",
+    firstName: "مهدی محمدی",
+    age: 44,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 8,
+    position: "حسابدار",
+    firstName: "مریم گلی",
+    age: 36,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+  {
+    id: 9,
+    position: "مدیر دفتر",
+    firstName: "محمدرضا قنبری",
+    age: 65,
+    office: "تهران",
+    startDate: "1400/8/10",
+    salary: "20 میل",
+  },
+]
+
+const columnsMUI = [
+  // { field: "id", headerName: "ID", width: 90 },
+  {
+    field: "firstName",
+    headerName: "نام",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "position",
+    headerName: "موقعیت",
+    width: 240,
+    editable: true,
+  },
+  {
+    field: "office",
+    headerName: "دفتر",
+    width: 210,
+    editable: true,
+  },
+  {
+    field: "age",
+    headerName: "سن",
+    type: "number",
+    width: 110,
+    editable: true,
+  },
+  {
+    field: "startDate",
+    headerName: "تاریخ شروع",
+    width: 210,
+    editable: true,
+  },
+  {
+    field: "salary",
+    headerName: "حقوق",
+    width: 210,
+    editable: true,
+  },
+]
+export {chartInSalesDatas,piChartInSalesDatas,barChartInSalesDatas,infoChartInRow3,lineChartInfos,chartInAnalyzeRow2Datas,rowsMUI,columnsMUI}

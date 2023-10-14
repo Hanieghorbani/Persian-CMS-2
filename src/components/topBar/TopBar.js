@@ -18,7 +18,7 @@ export default function TopBar() {
   return (
     <div className="topbar d-flex justify-content-between align-items-center py-3 px-4 position-sticky top-0 w-100 z-3 bg-dark">
       <div>
-        <img src="/imgs/logo.png" className="logo" />
+        <img src="/imgs/logo.png" className="logo ms-5" />
         <SearchBox />
       </div>
 

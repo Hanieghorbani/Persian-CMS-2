@@ -24,7 +24,7 @@ export default function Sidebar() {
           </Accordion.Header>
           <Accordion.Body>
             <ul>
-              <Link to={"/sales"}>
+              <Link to={"/"}>
                 <li>فروش ها</li>
               </Link>
               <Link to={"/analyze"}>
@@ -41,9 +41,7 @@ export default function Sidebar() {
           </Accordion.Header>
           <Accordion.Body>
             <ul>
-              <Link to={"/datasTable"}>
                 <li>پایه ای</li>
-              </Link>
             </ul>
           </Accordion.Body>
         </Accordion.Item>
@@ -92,8 +90,12 @@ export default function Sidebar() {
           </Accordion.Header>
           <Accordion.Body>
             <ul>
-              <li>مخاطبین</li>
-              <li>یادداشت</li>
+              <Link to={"./contacts"}>
+                <li>مخاطبین</li>
+              </Link>
+              <Link to={"./notes"}>
+                <li>یادداشت</li>
+              </Link>
             </ul>
           </Accordion.Body>
         </Accordion.Item>

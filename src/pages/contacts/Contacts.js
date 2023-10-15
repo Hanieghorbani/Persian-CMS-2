@@ -15,12 +15,15 @@ import { func } from "prop-types"
 
 export default function Contacts() {
   const [showModalAddUser, setShowModalAddUser] = useState(false)
+  const [showModalEditUser, setShowModalEditUser] = useState(false)
   const [name, setName] = useState("")
   const [pos, setPos] = useState("")
   const [email, setEmail] = useState("")
   const [addr, setAddr] = useState("")
   const [phone, setPhone] = useState("")
+  const [ID, setID] = useState("")
   const [contacts, setContacts] = useState(contactsDatas)
+
   function addUserHandler() {
     if (name && pos && email && phone && addr) {
       const newContact = {
@@ -44,6 +47,39 @@ export default function Contacts() {
     setContacts(filteredContact)
   }
 
+  function editHand(userId) {
+    let userEdit = contacts.find((contact) => contact.id == userId)
+    setID(userId)
+    setName(userEdit.name)
+    setEmail(userEdit.email)
+    setPos(userEdit.pos)
+    setAddr(userEdit.addr)
+    setPhone(userEdit.phone)
+    setShowModalEditUser(true)
+  }
+
+  function editUserBtn() {
+    let editUsers = []
+    contacts.forEach((user) => {
+      if (name && pos && email && phone && addr) {
+        if (user.id == ID) {
+          editUsers.push({
+            id: contacts.id,
+            name,
+            email,
+            pos,
+            addr,
+            phone,
+          })
+        } else {
+          editUsers.push(user)
+        }
+        setContacts(editUsers)
+        setShowModalEditUser(false)
+      }
+    })
+  }
+
   function cancleBtn() {
     setAddr("")
     setPhone("")
@@ -51,16 +87,19 @@ export default function Contacts() {
     setPos("")
     setName("")
     setShowModalAddUser(false)
+    setShowModalEditUser(false)
   }
   return (
     <div className="contacts mt-4 w-100 p-4">
       <div className="d-flex justify-content-between contactsTop w-100">
         <SearchBox />
-
         <div className="d-flex">
           <PersonAddIcon
             className="ms-3"
-            onClick={() => setShowModalAddUser(true)}
+            onClick={() => {
+              cancleBtn()
+              setShowModalAddUser(true)
+            }}
           />
           <FormatListBulletedOutlinedIcon className="ms-1" />
           <GridViewOutlinedIcon />
@@ -91,7 +130,10 @@ export default function Contacts() {
               <p className="text-secondary">{contact.phone}</p>
 
               <div className="d-flex">
-                <EditRoundedIcon className="ms-2" />
+                <EditRoundedIcon
+                  className="ms-2"
+                  onClick={() => editHand(contact.id)}
+                />
                 <PersonRemoveOutlinedIcon
                   onClick={() => removeUserHandler(contact.id)}
                 />
@@ -100,6 +142,8 @@ export default function Contacts() {
           ))}
         </div>
       </div>
+
+      {/* modal for add. */}
       <Modal show={showModalAddUser}>
         <Modal.Header
           closeButton
@@ -170,6 +214,80 @@ export default function Contacts() {
           </Button>
           <Button variant="primary" onClick={addUserHandler}>
             افزودن
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* modal for edit */}
+      <Modal show={showModalEditUser}>
+        <Modal.Header
+          closeButton
+          onClick={() => setShowModalEditUser(false)}
+        ></Modal.Header>
+        <Modal.Body dir="rtl">
+          <Form>
+            <div className="row">
+              <div className="col-6">
+                <Form.Control
+                  placeholder="نام"
+                  autoFocus
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="mb-3"
+                  required
+                />
+              </div>
+              <div className="col-6">
+                <Form.Control
+                  className="mb-3"
+                  placeholder="ایمیل"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-6">
+                <Form.Control
+                  placeholder="شغل"
+                  autoFocus
+                  value={pos}
+                  onChange={(e) => setPos(e.target.value)}
+                  className="mb-3"
+                  required
+                />
+              </div>
+              <div className="col-6">
+                <Form.Control
+                  className="mb-3"
+                  placeholder="موبایل"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col">
+                <Form.Control
+                  className="mb-3"
+                  placeholder="آدرس"
+                  value={addr}
+                  onChange={(e) => setAddr(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={cancleBtn}>
+            نادیده گرفتن
+          </Button>
+          <Button variant="primary" onClick={editUserBtn}>
+            ذخیره
           </Button>
         </Modal.Footer>
       </Modal>

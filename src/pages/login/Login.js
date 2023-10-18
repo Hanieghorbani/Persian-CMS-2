@@ -3,10 +3,11 @@ import "./Login.css"
 import GitHubIcon from "@mui/icons-material/GitHub"
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
 import { Link } from "react-router-dom"
+import useInput from "../../hooks/useInput"
 
 export default function Login() {
-  const [firstNameData, setFirstNameData] = useState("")
-  const [password, setPassword] = useState("")
+  const [firstNameData, setFirstNameData,resetName] = useInput("")
+  const [password, setPassword,resetPass] = useInput("")
   const [submitted, setSubmitted] = useState(false)
   const [allValid, setAllValid] = useState(false)
 
@@ -15,23 +16,15 @@ export default function Login() {
     setSubmitted(true)
     if (firstNameData && password) {
       setAllValid(true)
-   
       setTimeout(() => {
-        setFirstNameData("")
-        setPassword("")
+      resetName('')
+      resetPass('')
         setAllValid(false)
         setSubmitted(false)
       }, 3000)
     }
   }
 
-  function firstNameHandler(e) {
-    setFirstNameData(e.nativeEvent.target.value)
-  }
-
-  function passHandler(e) {
-    setPassword(e.nativeEvent.target.value)
-  }
 
   return (
     <div className="form-container my-4">
@@ -53,8 +46,7 @@ export default function Login() {
           id="first-name"
           className="form-field"
           type="text"
-          value={firstNameData}
-          onChange={firstNameHandler}
+          {...setFirstNameData}
           
         />
         {submitted && !firstNameData && (
@@ -72,8 +64,7 @@ export default function Login() {
           id="pass"
           className="form-field"
           type="password"
-          value={password}
-          onChange={passHandler}
+          {...setPassword}
         />
         {submitted && !password && (
           <span>لطفا رمز عبور را وارد نمایید!</span>

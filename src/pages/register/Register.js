@@ -4,10 +4,11 @@ import GitHubIcon from "@mui/icons-material/GitHub"
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined"
 import { Link } from "react-router-dom"
 import Form from "react-bootstrap/Form"
+import useInput from "../../hooks/useInput"
 export default function Register() {
-  const [firstNameData, setFirstNameData] = useState("")
-  const [password, setPassword] = useState("")
-  const [emailData, setEmailData] = useState("")
+  const [firstNameData, setFirstNameData,nameReset] = useInput("")
+  const [password, setPassword,passReset] = useInput("")
+  const [emailData, setEmailData,emailReset] = useInput("")
   const [submitted, setSubmitted] = useState(false)
   const [allValid, setAllValid] = useState(false)
 
@@ -17,25 +18,13 @@ export default function Register() {
     if (firstNameData && password && emailData) {
       setAllValid(true)
       setTimeout(() => {
-        setEmailData("")
-        setFirstNameData("")
-        setPassword("")
+        nameReset()
+        passReset()
+        emailReset()
         setAllValid(false)
         setSubmitted(false)
       }, 3000)
     }
-  }
-
-  function firstNameHandler(e) {
-    setFirstNameData(e.nativeEvent.target.value)
-  }
-
-  function passHandler(e) {
-    setPassword(e.nativeEvent.target.value)
-  }
-
-  function emailHandler(e) {
-    setEmailData(e.nativeEvent.target.value)
   }
 
   return (
@@ -53,8 +42,7 @@ export default function Register() {
           id="first-name"
           className="form-field"
           type="text"
-          value={firstNameData}
-          onChange={firstNameHandler}
+          {...setFirstNameData}
         />
         {submitted && !firstNameData && (
           <span>لطفا نام کاربری را وارد نمایید!</span>
@@ -66,8 +54,7 @@ export default function Register() {
           id="first-name"
           className="form-field"
           type="text"
-          value={emailData}
-          onChange={emailHandler}
+          {...setEmailData}
         />
         {submitted && !emailData && <span>لطفا ایمیل خود را وارد نمایید!</span>}
 
@@ -83,8 +70,7 @@ export default function Register() {
           id="pass"
           className="form-field"
           type="password"
-          value={password}
-          onChange={passHandler}
+          {...setPassword}
         />
         {submitted && !password && (
           <span id="first-name-error">لطفا رمز عبور را وارد نمایید!</span>

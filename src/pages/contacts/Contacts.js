@@ -11,16 +11,16 @@ import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
 import Form from "react-bootstrap/Form"
 import { useState } from "react"
-import { func } from "prop-types"
+import useInput from "../../hooks/useInput"
 
 export default function Contacts() {
   const [showModalAddUser, setShowModalAddUser] = useState(false)
   const [showModalEditUser, setShowModalEditUser] = useState(false)
-  const [name, setName] = useState("")
-  const [pos, setPos] = useState("")
-  const [email, setEmail] = useState("")
-  const [addr, setAddr] = useState("")
-  const [phone, setPhone] = useState("")
+  const [name, setName, resetName, mainSetName] = useInput("")
+  const [pos, setPos, resetPos, mainSetPos] = useInput("")
+  const [email, setEmail, resetEmail, mainSetEmail] = useInput("")
+  const [addr, setAddr, resetAddr, mainSetAddr] = useInput("")
+  const [phone, setPhone, resetPhone, mainSetPhone] = useInput("")
   const [ID, setID] = useState("")
   const [contacts, setContacts] = useState(contactsDatas)
 
@@ -48,13 +48,14 @@ export default function Contacts() {
   }
 
   function editHand(userId) {
+    console.log(setName)
     let userEdit = contacts.find((contact) => contact.id == userId)
     setID(userId)
-    setName(userEdit.name)
-    setEmail(userEdit.email)
-    setPos(userEdit.pos)
-    setAddr(userEdit.addr)
-    setPhone(userEdit.phone)
+    mainSetName(userEdit.name)
+    mainSetEmail(userEdit.email)
+    mainSetPos(userEdit.pos)
+    mainSetAddr(userEdit.addr)
+    mainSetPhone(userEdit.phone)
     setShowModalEditUser(true)
   }
 
@@ -81,11 +82,11 @@ export default function Contacts() {
   }
 
   function cancleBtn() {
-    setAddr("")
-    setPhone("")
-    setEmail("")
-    setPos("")
-    setName("")
+    resetAddr()
+    resetEmail()
+    resetName()
+    resetPhone()
+    resetPos()
     setShowModalAddUser(false)
     setShowModalEditUser(false)
   }
@@ -156,8 +157,7 @@ export default function Contacts() {
                 <Form.Control
                   placeholder="نام"
                   autoFocus
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  {...setName}
                   className="mb-3"
                   required
                 />
@@ -166,8 +166,7 @@ export default function Contacts() {
                 <Form.Control
                   className="mb-3"
                   placeholder="ایمیل"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  {...setEmail}
                   required
                 />
               </div>
@@ -177,8 +176,7 @@ export default function Contacts() {
                 <Form.Control
                   placeholder="شغل"
                   autoFocus
-                  value={pos}
-                  onChange={(e) => setPos(e.target.value)}
+                  {...setPos}
                   className="mb-3"
                   required
                 />
@@ -187,8 +185,7 @@ export default function Contacts() {
                 <Form.Control
                   className="mb-3"
                   placeholder="موبایل"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  {...setPhone}
                   required
                 />
               </div>
@@ -196,12 +193,10 @@ export default function Contacts() {
 
             <div className="row">
               <div className="col">
-                {" "}
                 <Form.Control
                   className="mb-3"
                   placeholder="آدرس"
-                  value={addr}
-                  onChange={(e) => setAddr(e.target.value)}
+                  {...setAddr}
                   required
                 />
               </div>
@@ -231,8 +226,7 @@ export default function Contacts() {
                 <Form.Control
                   placeholder="نام"
                   autoFocus
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  {...setName}
                   className="mb-3"
                   required
                 />
@@ -241,8 +235,7 @@ export default function Contacts() {
                 <Form.Control
                   className="mb-3"
                   placeholder="ایمیل"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  {...setEmail}
                   required
                 />
               </div>
@@ -252,8 +245,7 @@ export default function Contacts() {
                 <Form.Control
                   placeholder="شغل"
                   autoFocus
-                  value={pos}
-                  onChange={(e) => setPos(e.target.value)}
+                  {...setPos}
                   className="mb-3"
                   required
                 />
@@ -262,8 +254,7 @@ export default function Contacts() {
                 <Form.Control
                   className="mb-3"
                   placeholder="موبایل"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  {...setPhone}
                   required
                 />
               </div>
@@ -274,8 +265,7 @@ export default function Contacts() {
                 <Form.Control
                   className="mb-3"
                   placeholder="آدرس"
-                  value={addr}
-                  onChange={(e) => setAddr(e.target.value)}
+                  {...setAddr}
                   required
                 />
               </div>

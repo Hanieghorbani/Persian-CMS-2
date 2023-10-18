@@ -9,24 +9,19 @@ import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRen
 import StarIcon from "@mui/icons-material/Star"
 import "./Notes.css"
 import { useState } from "react"
+import useInput from "../../hooks/useInput"
 export default function Notes() {
   const [showModalAddNote, setShowModalAddNote] = useState(false)
-  const [title, setTitle] = useState("")
-  const [content, setContent] = useState("")
+  const [title, setTitle,resetTitle] = useInput("")
+  const [content, setContent,resetCont] = useInput("")
   const [notes, setNotes] = useState(notesData)
   const [star, setStar] = useState(false)
   const [status, setStatus] = useState("همه یادداشت ها")
-  function titleHand(e) {
-    setTitle(e.target.value)
-  }
-  function contentHand(e) {
-    setContent(e.target.value)
-  }
 
   function cancelBtn() {
     setShowModalAddNote(false)
-    setContent("")
-    setTitle("")
+    resetCont()
+    resetTitle()
   }
 
   function addNoteHandler() {
@@ -43,8 +38,8 @@ export default function Notes() {
 
     setNotes((prev) => [...prev, newNote])
     setShowModalAddNote(false)
-    setTitle("")
-    setContent("")
+    resetCont()
+    resetTitle()
   }
 
   function removeHand(noteId) {
@@ -125,8 +120,7 @@ export default function Notes() {
                   <Form.Control
                     placeholder="عنوان"
                     autoFocus
-                    value={title}
-                    onChange={titleHand}
+                   {...setTitle}
                     required
                   />
                 </Form.Group>
@@ -138,8 +132,7 @@ export default function Notes() {
                     as="textarea"
                     rows={3}
                     placeholder="توضیحات"
-                    value={content}
-                    onChange={contentHand}
+                  {...setContent}
                     maxLength={50}
                     required
                   />

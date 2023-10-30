@@ -5,7 +5,7 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag"
 import './Analogy.css'
 export default function Analogy(props) {
   return (
-    <div>
+    <div className='barChart p-4 rounded'>
         <h6 className="mb-5 text-white">{props.title}</h6>
           <div className="d-flex align-items-center">
             <ShoppingBagIcon className="bagIcon" />

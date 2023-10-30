@@ -1,47 +1,51 @@
-.topbar{
+.topbar {
   direction: rtl;
 }
 
-.topbarLeft .lang{
-   width: 25px;
-   cursor: pointer;
+.topbarLeft .lang {
+  width: 25px;
+  cursor: pointer;
+}
+.topbarLeft svg {
+  cursor: pointer;
 }
 
-.topbarLeft .logo{
-  width: 90px;
+.logo {
+  width: 130px;
+  cursor: pointer;
 }
 
-.topbarLeft svg{
-  cursor: pointer;;
-}
-
-.logo{
-    width: 130px;
-    cursor: pointer;
-}
-
-.profile{
+.profile {
   width: 60px;
   cursor: pointer;
 }
 
-.icons-topbar div{
-    position: relative;
-    margin-right: 0.5rem;
-    cursor: pointer;
+.icons-topbar div {
+  position: relative;
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
-.icons-topbar span{
-   position: absolute;
-   top: -2px;
-   left: 12px;
-   background: rgb(234, 83, 83);
-   color: white;
-   border-radius: 50%;
-   width: 15px;
-   height: 15px;
-   font-size: 10px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-} 
+.icons-topbar span {
+  position: absolute;
+  top: -2px;
+  left: 12px;
+  background: rgb(234, 83, 83);
+  color: white;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 420px) {
+  .logo {
+    width: 70px;
+  }
+  .topbarLeft .lang {
+    width: 15px;
+  }
+}

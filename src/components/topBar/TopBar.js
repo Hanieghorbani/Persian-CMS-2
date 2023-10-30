@@ -14,20 +14,32 @@ import {
 import SearchIcon from "@mui/icons-material/Search"
 import MailOutlineIcon from "@mui/icons-material/MailOutline"
 import SearchBox from "../searchBox/SearchBox"
+import MenuIcon from '@mui/icons-material/Menu';
+
 export default function TopBar() {
   return (
-    <div className="topbar d-flex justify-content-between align-items-center py-3 px-4 position-sticky top-0 w-100 z-3 bg-dark">
+    <div className="w-100 position-sticky top-0 z-3">
+       <div className="topbar d-flex justify-content-between align-items-center py-3 px-4 w-100 bg-dark">
       <div>
-        <img src="/imgs/logo.png" className="logo ms-5" />
-        <SearchBox />
+        <img src="/imgs/logo.png" className="logo ms-lg-5" />
+        <div className="d-none d-lg-inline-block">
+          <SearchBox />
+        </div>
       </div>
 
       <div className="topbarLeft d-flex align-items-center">
         <img src="/imgs/ca.png" className="lang" />
-        <MailOutlineIcon className="text-secondary fs-3 mx-3" />
-        <NotificationsNoneIcon className="text-secondary fs-3 ms-3" />
+        <SearchIcon className="d-inline-block d-lg-none fs-5 fs-lg-3 text-secondary me-1" />
+        <MailOutlineIcon className="text-secondary fs-5 fs-lg-3 mx-1 mx-lg-3 " />
+        <NotificationsNoneIcon className="text-secondary fs-5 fs-lg-3 ms-1 ms-lg-3" />
         <img src="/imgs/logo.png" className="logo" />
       </div>
     </div>
+
+    <div className="d-flex d-lg-none w-100 bg-secondary px-3">
+    <MenuIcon className="text-light"/>
+    </div>
+    </div>
+   
   )
 }

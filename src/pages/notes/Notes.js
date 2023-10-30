@@ -8,12 +8,12 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined"
 import DriveFileRenameOutlineOutlinedIcon from "@mui/icons-material/DriveFileRenameOutlineOutlined"
 import StarIcon from "@mui/icons-material/Star"
 import "./Notes.css"
-import { useState } from "react"
+import { useState, useMem } from "react"
 import useInput from "../../hooks/useInput"
 export default function Notes() {
   const [showModalAddNote, setShowModalAddNote] = useState(false)
-  const [title, setTitle,resetTitle] = useInput("")
-  const [content, setContent,resetCont] = useInput("")
+  const [title, setTitle, resetTitle] = useInput("")
+  const [content, setContent, resetCont] = useInput("")
   const [notes, setNotes] = useState(notesData)
   const [star, setStar] = useState(false)
   const [status, setStatus] = useState("همه یادداشت ها")
@@ -120,7 +120,7 @@ export default function Notes() {
                   <Form.Control
                     placeholder="عنوان"
                     autoFocus
-                   {...setTitle}
+                    {...setTitle}
                     required
                   />
                 </Form.Group>
@@ -132,7 +132,7 @@ export default function Notes() {
                     as="textarea"
                     rows={3}
                     placeholder="توضیحات"
-                  {...setContent}
+                    {...setContent}
                     maxLength={50}
                     required
                   />

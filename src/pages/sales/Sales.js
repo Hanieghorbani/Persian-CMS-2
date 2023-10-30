@@ -28,18 +28,18 @@ export default function Sales() {
   return (
     <div className="sales w-100 p-4">
       <div className="row row1">
-        <div className="col-8">
+        <div className="col-12 col-lg-8">
           <Chart />
         </div>
-        <div className="col-4">
+        <div className="col-12 col-lg-4 mt-4 mt-lg-0">
           <PiChart />
         </div>
       </div>
       <div className="row row2 my-4">
-        <div className="col-4">
+        <div className="col-12 col-md-6 col-lg-4">
           <BarCharts />
         </div>
-        <div className="col-4 text-white p-4 rounded pb-0">
+        <div className="col-12 col-md-6 col-lg-4 text-white my-4 my-lg-0 my-md-0">
           <Analogy
             title="خلاصه"
             key1="درآمد"
@@ -50,67 +50,26 @@ export default function Sales() {
             value3="550000 تومان"
           />
         </div>
-        <div className="col-4">
-          {/* <div className="infoChart rounded pt-1">
-            <dir
-              className="d-flex align-items-center p-3"
-              //  style={{marginLeft:'-30px'}}
-            >
-              <ShoppingCartOutlinedIcon className="basketIcon ms-3" />
-              <div className="text-white">
-                <h4>3,123</h4>
-                <p className="fw-bold" style={{ fontSize: "12px" }}>
-                  کل سفارشات
-                </p>
-              </div>
-            </dir>
-            <ResponsiveContainer width="100%" height={200}>
-              <AreaChart
-                width="100%"
-                height={250}
-                data={infoChartInRow3}
-                margin={{ top: 10, right: 0, left: 0, bottom: 0 }}
-              >
-                <defs>
-                  <linearGradient id="colorUv" x1="1" y1="0" x2="1" y2="1">
-                    <stop offset="15%" stopColor="#fff" stopOpacity={1} />
-                    <stop offset="85%" stopColor="#fff" stopOpacity={0.3} />
-                  </linearGradient>
-                </defs>
-                <Tooltip
-                  contentStyle={{
-                    background: "#0e1726",
-                    border: "none",
-                    color: "white",
-                    borderRadius: "12px",
-                  }}
-                  labelStyle={{ display: "none" }}
-                />
-                <Area
-                  type="monotone"
-                  dataKey="فروشها"
-                  stroke="white"
-                  fillOpacity={1}
-                  fill="url(#colorUv)"
-                  strokeWidth={2}
-                />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div> */}
-        <SimpleChart title='کل سفارشات' value='4,200' color='white' height={200}/>
+        <div className="col-12 col-lg-4 mt-md-4">
+          <SimpleChart
+            title="کل سفارشات"
+            value="4,200"
+            color="white"
+            height={200}
+          />
         </div>
       </div>
 
       <div className="row row3">
-        <div className="col-5">
-          <div className="text-white p-4 rounded">
-            <h5>معاملات</h5>
+        <div className="col-12 col-md-6 col-lg-5">
+          <div className="text-white p-1 p-lg-4 rounded">
+            <h5 className="p-4 p-lg-0">معاملات</h5>
             <div>
-              <div className="d-flex rounded align-items-center justify-content-between p-2 mt-3">
-                <LocalOfferIcon className="cartIcon" />
+              <div className="d-flex rounded align-items-center justify-content-between p-1 p-lg-2 mt-3">
+                <LocalOfferIcon className="cartIcon ms-3 ms-lg-0" />
                 <div
                   className="d-flex justify-content-between align-items-center"
-                  style={{ width: "85%" }}
+                  style={{ width: "95%" }}
                 >
                   <div>
                     <h6 className="fw-bold">قبض برق</h6>
@@ -124,10 +83,10 @@ export default function Sales() {
               </div>
 
               <div className="d-flex  rounded align-items-center justify-content-between p-2 mt-3">
-                <ShoppingBagIcon className="tagIcon" />
+                <ShoppingBagIcon className="tagIcon ms-3 ms-lg-0" />
                 <div
                   className="d-flex justify-content-between align-items-center"
-                  style={{ width: "85%" }}
+                  style={{ width: "95%" }}
                 >
                   <div>
                     <h6 className="fw-bold">قبض آب</h6>
@@ -141,10 +100,10 @@ export default function Sales() {
               </div>
 
               <div className="d-flex  rounded align-items-center justify-content-between p-2 mt-3">
-                <LocalOfferIcon className="tagIcon" />
+                <LocalOfferIcon className="tagIcon ms-3 ms-lg-0" />
                 <div
                   className="d-flex justify-content-between align-items-center"
-                  style={{ width: "85%" }}
+                  style={{ width: "95%" }}
                 >
                   <div>
                     <h6 className="fw-bold">نتفلیکس</h6>
@@ -158,10 +117,10 @@ export default function Sales() {
               </div>
 
               <div className="d-flex  rounded align-items-center justify-content-between p-2 mt-3">
-                <ShoppingCartOutlinedIcon className="cartIcon" />
+                <ShoppingCartOutlinedIcon className="cartIcon ms-3 ms-lg-0" />
                 <div
                   className="d-flex justify-content-between align-items-center"
-                  style={{ width: "85%" }}
+                  style={{ width: "95%" }}
                 >
                   <div>
                     <h6 className="fw-bold">لورم ایپسوم</h6>
@@ -176,86 +135,13 @@ export default function Sales() {
             </div>
           </div>
         </div>
-        <div className="col-3 rounded">
-          {/* <h5 className="text-white p-4">فعالیت های اخیر</h5>
-          <div className="recentActs">
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-info ms-1">●</span>
-                بروزرسانی گزارشات سرور
-              </p>
-              <p className="text-secondary">همین الان</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-success ms-1">●</span>
-                ارسال نامه به HR و ادمین
-              </p>
-              <p className="text-secondary">2 دقیقه پیش</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-danger ms-1">●</span>
-                پشتیبان گیری فایل EOD
-              </p>
-              <p className="text-secondary">14:00</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-secondary ms-1">●</span>
-                جمع آوری اسناد از سارا
-              </p>
-              <p className="text-secondary">16:09</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-warning ms-1">●</span>
-                جزئیات قرارداد را به فریلنسر ارسال کنید
-              </p>
-              <p className="text-secondary">17:36</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-info ms-1">●</span>
-                مهدی می خواهد زمان پروژه را افزایش دهد.
-              </p>
-              <p className="text-secondary">همین الان</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-info ms-1">●</span>
-                بروزرسانی گزارشات سرور
-              </p>
-              <p className="text-secondary">همین الان</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-info ms-1">●</span>
-                بروزرسانی گزارشات سرور
-              </p>
-              <p className="text-secondary">همین الان</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-info ms-1">●</span>
-                بروزرسانی گزارشات سرور
-              </p>
-              <p className="text-secondary">همین الان</p>
-            </div>
-            <div className="d-flex align-items-center justify-content-between">
-              <p className="d-flex align-items-center text-secondary fw-bold">
-                <span className="text-info ms-1">●</span>
-                بروزرسانی گزارشات سرور
-              </p>
-              <p className="text-secondary">همین الان</p>
-            </div>
-          </div> */}
+        <div className="col-12 col-md-6 col-lg-3 rounded my-4 my-lg-0 my-md-0 barChart">
           <ScrollBox title="فعالیت های اخیر" />
           <button className="btn text-info w-100 m-auto">
             مشاهده همه <KeyboardArrowLeftIcon className="arrowDown" />
           </button>
         </div>
-        <div className="col-4">
+        <div className="col-12 col-lg-4 mt-md-4">
           <div className="p-4 rounded">
             <h5 className="text-white mb-5">اطلاعات حساب</h5>
             <div className="d-flex justify-content-center text-white flex-column align-items-center">

@@ -8,11 +8,12 @@ export default function PiChart() {
   return (
     <div className="w-100 piChart p-4">
       <h5 className="text-white">فروش بر اساس دسته بندی</h5>
-      <ResponsiveContainer width='90%' height={340} className='d-flex justify-content-center'>
+      <ResponsiveContainer height={340} 
+      >
         <PieChart>
           <Pie
             data={piChartInSalesDatas}
-            cx={120}
+            // cx={110}
             cy={200}
             innerRadius={60}
             outerRadius={80}
@@ -32,7 +33,7 @@ export default function PiChart() {
 
         </PieChart>
       </ResponsiveContainer>
-      <div className="guidancePiChart d-flex align-items-center justify-content-between mb-3 w-75 mx-auto">
+      <div className="guidancePiChart d-flex align-items-center justify-content-between mb-3 w-100 w-lg-75 w-md-75 mx-auto">
         <h6 className="text-white"><span>●</span> پوشاک</h6>
         <h6 className="text-white"> <span className="text-success fs-4">●</span> الکترونیک</h6>
         <h6 className="text-white"> <span className="text-warning fs-4">●</span> دیگر</h6>

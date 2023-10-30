@@ -14,7 +14,7 @@ import { Accordion } from "react-bootstrap"
 import { Link } from "react-router-dom"
 export default function Sidebar() {
   return (
-    <div className="sidebar">
+    <div className="sidebar d-none d-lg-block">
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>
@@ -41,7 +41,7 @@ export default function Sidebar() {
           </Accordion.Header>
           <Accordion.Body>
             <ul>
-                <li>پایه ای</li>
+              <li>پایه ای</li>
             </ul>
           </Accordion.Body>
         </Accordion.Item>

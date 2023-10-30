@@ -9,10 +9,10 @@
     background: #1b55e2;
 }
 
-
 .sales .row3 .col-5 > div,
 .sales .row3 .col-3,
- .row3 .col-4 > div {
+.row3 .col-4 > div,
+.sales .row3 .col-12 > div {
     background: #0e1726;
 }
 
@@ -22,16 +22,22 @@
     color: rgb(71, 71, 251);
 }
 
-.row3 .col-5 p {
+.row3 .col-5 p,
+.row3 .col-12 p {
     font-size: 13px;
     font-weight: bold;
 }
 
 .row3 .col-5 > div > div > div {
     border: 1px dashed white;
-    /* padding-right: 10px !important; */
 }
 
 .row3 .arrowDown {
     transform: rotate(-90deg);
+}
+
+@media only screen and (max-width: 350px) {
+    .row3 .col-12 p {
+        font-size: 11px;
+    }
 }

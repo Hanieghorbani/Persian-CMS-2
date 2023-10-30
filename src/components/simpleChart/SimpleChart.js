@@ -2,9 +2,6 @@ import React from 'react'
 import {
     AreaChart,
     Area,
-    XAxis,
-    YAxis,
-    CartesianGrid,
     Tooltip,
     ResponsiveContainer,
   } from "recharts"
@@ -12,12 +9,10 @@ import {
   import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined"
 import { infoChartInRow3 } from '../../datas'
 export default function SimpleChart(props) {
-    console.log(props.color);
   return (
     <div className="infoChart rounded pt-1">
             <dir
               className="d-flex align-items-center p-3"
-              //  style={{marginLeft:'-30px'}}
             >
               <ShoppingCartOutlinedIcon className="basketIcon ms-3" />
               <div className="text-white">

@@ -15,8 +15,11 @@ import SearchIcon from "@mui/icons-material/Search"
 import MailOutlineIcon from "@mui/icons-material/MailOutline"
 import SearchBox from "../searchBox/SearchBox"
 import MenuIcon from '@mui/icons-material/Menu';
-
+import CmsContext from "../../contexts/cmsContext"
+import { useContext } from "react"
+import context from "react-bootstrap/esm/AccordionContext"
 export default function TopBar() {
+  const contextData = useContext(CmsContext)
   return (
     <div className="w-100 position-sticky top-0 z-3">
        <div className="topbar d-flex justify-content-between align-items-center py-3 px-4 w-100 bg-dark">
@@ -36,8 +39,8 @@ export default function TopBar() {
       </div>
     </div>
 
-    <div className="d-flex d-lg-none w-100 bg-secondary px-3">
-    <MenuIcon className="text-light"/>
+    <div className="d-flex d-lg-none w-100 bg-secondary p-3">
+    <MenuIcon className="text-light" style={{cursor:"pointer"}} onClick={()=>contextData.setShowMenuBar(prev=>!prev)}/>
     </div>
     </div>
    

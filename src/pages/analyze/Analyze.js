@@ -21,9 +21,9 @@ import Analogy from "../../components/analogy/Analogy"
 import SimpleChart from "../../components/simpleChart/SimpleChart"
 export default function Analyze() {
   return (
-    <div className="analyze w-100 my-4">
-      <div className="row w-100 row1">
-        <div className="col-5">
+    <div className="analyze w-100 my-4 px-2">
+      <div className="row w-100 row1 m-0 m-lg-auto">
+        <div className="col-12 col-lg-5">
           <div className="text-white rounded p-4 pb-0">
             <h5>آمار</h5>
             <div className="d-flex justify-content-between mt-4">
@@ -40,7 +40,7 @@ export default function Analyze() {
             </div>
           </div>
         </div>
-        <div className="col-4">
+        <div className="col-12 col-lg-4 my-4 my-lg-0">
           <div className="text-white rounded p-4">
             <div className="d-flex align-items-center mb-5 justify-content-between">
               <div>
@@ -51,12 +51,12 @@ export default function Analyze() {
             </div>
             <div className="bg-secondary rounded-pill p-1">
               <div className="w-75 gradient rounded-pill d-flex justify-content-end align-items-center ps-1">
-                <p className="text-black mt-2 fs-4">●</p>
+                <p className="text-black mb-2 mb-lg-0 mt-lg-2 fs-4">●</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-12 col-lg-3 mb-4 mb-lg-0">
           <div className="text-white rounded p-4">
             <div className="d-flex justify-content-between align-items-center mb-5 pb-3">
               <h6>پنل ویژه</h6>
@@ -77,21 +77,20 @@ export default function Analyze() {
         </div>
       </div>
 
-      <div className="row w-100 row2 my-4">
-        <div className="col-9">
+      <div className="row w-100 row2 my-lg-4 m-0">
+        <div className="col-12 col-lg-9">
           <div className="w-100 rounded pb-4">
             <h6 className="text-white border-bottom border-secondary pb-3 p-4">
               بازدید کنندگان یکتا
             </h6>
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer  height={300}>
               <BarChart
-                width={500}
                 height={300}
                 data={chartInAnalyzeRow2Datas}
                 margin={{
                   top: 5,
-                  right: 30,
-                  left: 20,
+                  right: 10,
+                  left: 1,
                   bottom: 5,
                 }}
               >
@@ -118,16 +117,16 @@ export default function Analyze() {
             </ResponsiveContainer>
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-12 col-lg-3 my-4 my-lg-0">
           <div className="rounded pb-4">
             <ScrollBox title="اطلاعیه ها" />
           </div>
         </div>
       </div>
 
-      <div className="row row3 w-100">
-        <div className="col-4">
-          <div className="p-4 text-white">
+      <div className="row row3 w-100 m-0 mlg-auto">
+        <div className="col-12 col-lg-4">
+          <div className="p-lg-4 text-white rounded">
             <Analogy
               title="بازدید کنندگان توسط مرورگر"
               key1="کروم"
@@ -139,7 +138,7 @@ export default function Analyze() {
             />
           </div>
         </div>
-        <div className="col-3">
+        <div className="col-12 col-lg-3 my-4 my-lg-0">
           <SimpleChart
           id='دنب'
             title="دنبال کنندگان"
@@ -148,10 +147,10 @@ export default function Analyze() {
             height={170}
           />
         </div>
-        <div className="col-2">
+        <div className="col-12 col-lg-2">
           <SimpleChart id='معر' title="معرف" value="700" color="red" height={170} />
         </div>
-        <div className="col-3">
+        <div className="col-12 col-lg-3 mt-4 mt-lg-0">
           <SimpleChart
             id='نام'
             title="نامزدی"

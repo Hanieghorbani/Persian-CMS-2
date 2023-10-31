@@ -12,10 +12,18 @@ import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline"
 import LockIcon from "@mui/icons-material/Lock"
 import { Accordion } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import CmsContext from "../../contexts/cmsContext"
+import { useContext } from "react"
 export default function Sidebar() {
+  const contextData = useContext(CmsContext)
+  function changeIsShowMenu(e){
+    if (e.target.tagName == 'LI') {
+      contextData.setShowMenuBar(false)
+    }
+  }
   return (
-    <div className="sidebar d-none d-lg-block">
-      <Accordion defaultActiveKey="0">
+    <div className={`sidebar ${contextData.showMenuBar ? 'd-block' : 'd-none'}`}>
+      <Accordion defaultActiveKey="0" onClick={e=>changeIsShowMenu(e)}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
             <HomeIcon />

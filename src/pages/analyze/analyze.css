@@ -2,18 +2,21 @@
 .analyze .row1 .col-4 > div,
 .analyze .row2 .col-9 > div,
 .analyze .row2 .col-3 > div,
+.analyze .col-12 > div,
 .analyze .infoChart
 {
   background: #0e1726;
 }
 
-.analyze .row1 .col-5 > div p {
+.analyze .row1 .col-5 > div p,
+.analyze .row1 .col-12 > div p {
   font-size: 13px;
   margin-bottom: -3px;
   font-weight: bold;
 }
 
-.analyze .row1 .col-5 > div h4 {
+.analyze .row1 .col-5 > div h4,
+.analyze .row1 .col-12:nth-child(1) > div h4{
   text-shadow: 1px 3px 5px rgb(230, 74, 74);
 }
 
@@ -22,7 +25,8 @@
   background: linear-gradient(to left, rgb(67, 174, 198), rgb(105, 46, 225));
 }
 
-.analyze .row1 .col-4 svg {
+.analyze .row1 .col-4 svg,
+.analyze .row1 .col-12:nth-child(2) svg  {
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -32,7 +36,8 @@
   background: rgb(105, 46, 225);
 }
 
-.analyze .row1 .col-3 > div {
+.analyze .row1 .col-3 > div,
+.analyze .row1 .col-12:nth-child(3) > div {
   background: linear-gradient(to left, rgb(38, 53, 56), rgb(142, 168, 116));
 }
 

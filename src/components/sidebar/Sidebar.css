@@ -2,7 +2,7 @@
     position: sticky;
     top: 82px;
     /* border-left: 1px solid gray; */
-    width: 20%;
+    /* width: 80%; */
     direction: ltr;
     padding-left: 10px;
     height: 90vh;
@@ -10,37 +10,37 @@
     margin-right: 10px;
 }
 
-.sidebar::-webkit-scrollbar{
+.sidebar::-webkit-scrollbar {
     width: 2px;
 }
 
-.sidebar::-webkit-scrollbar-track{
+.sidebar::-webkit-scrollbar-track {
     border-radius: 10px;
     background: #060818;
 }
-.sidebar::-webkit-scrollbar-thumb{
+.sidebar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: whitesmoke;
 }
-.sidebar .accordion{
+.sidebar .accordion {
     direction: rtl;
     position: sticky;
     top: 0;
 }
 
-.accordion-item{
+.accordion-item {
     border: none !important;
 }
 
 .accordion-item,
-.accordion-header button{
+.accordion-header button {
     /* background: #212529 !important; */
     background: #060818 !important;
     /* color: aliceblue; */
     color: #506690;
     transition: all 0.4s ease;
 }
-.accordion-header button:hover{
+.accordion-header button:hover {
     background: #59585854 !important;
 }
 .accordion-button {
@@ -49,13 +49,13 @@
     box-shadow: none !important;
 }
 
-.arrow{
+.arrow {
     transition: all 0.4s ease;
     position: absolute;
     left: 1rem;
 }
 
-.accordion-button.collapsed .arrow{
+.accordion-button.collapsed .arrow {
     transform: rotate(-90deg);
 }
 
@@ -66,7 +66,7 @@
     opacity: 0;
 }
 
-.accordion-header svg{
+.accordion-header svg {
     margin-left: 12px;
 }
 
@@ -96,4 +96,10 @@
 
 .sidebar a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 420px) {
+    .sidebar {
+        width: 100%;
+    }
 }

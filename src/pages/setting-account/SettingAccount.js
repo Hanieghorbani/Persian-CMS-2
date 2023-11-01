@@ -6,18 +6,19 @@ import TwitterIcon from "@mui/icons-material/Twitter"
 import GitHubIcon from "@mui/icons-material/GitHub"
 export default function SettingAccount() {
   return (
-    <div className="settingAcc m-3 w-100">
-      <div className="bgMain rounded p-4 ">
-        <h6 className="text-light mb-5">اطلاعات کلی</h6>
-        <div className="d-flex align-items-center px-5">
-          <div className="border-start border-secondary w-25 ms-4 ps-3">
+    <div className="settingAcc m-lg-3 w-100">
+   
+      <div className="bgMain rounded p-lg-4 pb-4 mx-4">
+        <h6 className="text-light mb-5 p-4 p-lg-0">اطلاعات کلی</h6>
+        <div className="d-flex flex-column flex-lg-row align-items-center px-lg-5">
+          <div className="border-lg-start border-secondary w-100 w-lg-25 ms-lg-4 ps-lg-3 px-4 px-lg-0">
             <input type="file" accept="image/*" className="w-100" />
             <p className="text-success">آپلود عکس</p>
           </div>
 
-          <div className="me-5 w-75">
+          <div className="me-lg-5 w-100 w-lg-75">
             <div className="row justify-content-between">
-              <div className="col-6">
+              <div className="col-lg-6">
                 <p>نام و نام خانوادگی</p>
                 <input
                   type="text"
@@ -25,9 +26,9 @@ export default function SettingAccount() {
                   className="w-100"
                 />
               </div>
-              <div className="col-6">
+              <div className="col-lg-6 mt-4 mt-lg-0">
                 <p>تاریخ تولد</p>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-lg-between flex-column flex-lg-row">
                   <select name="day" defaultValue={3}>
                     <option value="day">روز</option>
                     <option value="1">1</option>
@@ -63,7 +64,11 @@ export default function SettingAccount() {
                     <option value="31">31</option>
                   </select>
 
-                  <select name="month" defaultValue={"خرداد"} className="mx-1">
+                  <select
+                    name="month"
+                    defaultValue={"خرداد"}
+                    className="mx-lg-1 my-4 my-lg-0"
+                  >
                     <option value="ماه">ماه</option>
                     <option value="فروردین">فروردین</option>
                     <option value="اردیبهشت">اردیبهشت</option>
@@ -107,7 +112,7 @@ export default function SettingAccount() {
               </div>
             </div>
 
-            <div className="row mt-5">
+            <div className="row mt-4 mt-lg-5 mx-3 mx-lg-0">
               <p>حرفه</p>
               <input type="text" defaultValue="طراح سایت" className="" />
             </div>
@@ -115,21 +120,21 @@ export default function SettingAccount() {
         </div>
       </div>
 
-      <div className="bgMain rounded p-4 mt-3">
+      <div className="bgMain rounded p-4 mt-3 mx-4">
         <h6 className="text-light">بیوگرافی</h6>
 
-        <div className="mt-4 px-5">
+        <div className="mt-4 px-lg-5">
           <h6 className="text-secondary">درباره من</h6>
 
           <textarea rows="6" className="w-100 rounded fs-3"></textarea>
         </div>
       </div>
 
-      <div className="bgMain rounded p-4 my-3">
-        <h6 className="text-light">مخاطب</h6>
+      <div className="bgMain rounded p-1 p-lg-4 my-3 mx-4">
+        <h6 className="text-light p-3 p-lg-0">مخاطب</h6>
 
         <div className="row mt-5 px-5">
-          <div className="col-6">
+          <div className="col-lg-6">
             <p>کشور</p>
             <select name="country">
               <option value="همه کشورها">همه کشورها</option>
@@ -143,23 +148,23 @@ export default function SettingAccount() {
             </select>
           </div>
 
-          <div className="col-6">
+          <div className="col-lg-6 my-4 my-lg-0">
             <p>آدرس</p>
             <input type="text" defaultValue={"تهران"} />
           </div>
-          <div className="col-6 my-4">
+          <div className="col-lg-6 my-lg-4">
             <p>کد پستی</p>
             <input type="text" defaultValue={1234567890} />
           </div>
-          <div className="col-6 my-4">
+          <div className="col-lg-6 my-4">
             <p>موبایل</p>
             <input type="text" defaultValue={"989121234567+"} />
           </div>
-          <div className="col-6">
+          <div className="col-lg-6">
             <p>ایمیل</p>
             <input type="email" defaultValue={"hnie.ghorbani@gmail.com"} />
           </div>
-          <div className="col-6">
+          <div className="col-lg-6 my-4 my-lg-0">
             <p>وبسایت</p>
             <input
               type="text"
@@ -169,32 +174,32 @@ export default function SettingAccount() {
         </div>
       </div>
 
-      <div className="bgMain rounded p-4 mb-5">
+      <div className="bgMain rounded p-4 mb-lg-5 mx-4">
         <h6 className="text-light">اجتماعی</h6>
 
         <div className="row">
-          <div className="col-6 d-flex align-items-center">
+          <div className="col-lg-6 d-flex align-items-center">
             <FacebookOutlinedIcon />
-            <input type="text" />
+            <input type="text" placeholder="@hanie" />
           </div>
-          <div className="col-6 d-flex align-items-center my-4">
+          <div className="col-lg-6 d-flex align-items-center  my-4">
             <TwitterIcon />
-            <input type="text" />
+            <input type="text" placeholder="@hanie" />
           </div>
-          <div className="col-6 d-flex align-items-center my-4">
+          <div className="col-lg-6 d-flex align-items-center my-lg-4">
             <GitHubIcon />
-            <input type="text" />
+            <input type="text" placeholder="@hnieghorbani" />
           </div>
-          <div className="col-6 d-flex align-items-center">
+          <div className="col-lg-6 d-flex align-items-center mt-4 mt-lg-0">
             <GitHubIcon />
-            <input type="text" />
+            <input type="text" placeholder="@hnieghorbani" />
           </div>
         </div>
       </div>
 
-      <div className="saveCha d-flex rounded px-4 py-2 justify-content-between position-fixed bottom-0">
-        <button className="btn btn-info">تنظیم مجدد</button>
-        <button className="btn btn-secondary">ذخیره تغییرات</button>
+      <div className="saveCha d-flex rounded py-2 justify-content-between">
+        <button className="btn btn-info mx-5">تنظیم مجدد</button>
+        <button className="btn btn-secondary ms-5">ذخیره تغییرات</button>
       </div>
     </div>
   )

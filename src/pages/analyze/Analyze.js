@@ -51,7 +51,7 @@ export default function Analyze() {
             </div>
             <div className="bg-secondary rounded-pill p-1">
               <div className="w-75 gradient rounded-pill d-flex justify-content-end align-items-center ps-1">
-                <p className="text-black mb-2 mb-lg-0 mt-lg-2 fs-4">●</p>
+                <p className="text-black mb-2 mb-lg-1 fs-4">●</p>
               </div>
             </div>
           </div>

@@ -50,7 +50,7 @@ export default function Sales() {
             value3="550000 تومان"
           />
         </div>
-        <div className="col-12 col-lg-4 mt-md-4">
+        <div className="col-12 col-lg-4 mt-md-4 mt-lg-0">
           <SimpleChart
             title="کل سفارشات"
             value="4,200"
@@ -141,7 +141,7 @@ export default function Sales() {
             مشاهده همه <KeyboardArrowLeftIcon className="arrowDown" />
           </button>
         </div>
-        <div className="col-12 col-lg-4 mt-md-4">
+        <div className="col-12 col-lg-4 mt-md-4 mt-lg-0">
           <div className="p-4 rounded">
             <h5 className="text-white mb-5">اطلاعات حساب</h5>
             <div className="d-flex justify-content-center text-white flex-column align-items-center">

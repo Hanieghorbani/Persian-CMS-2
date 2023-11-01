@@ -1,11 +1,12 @@
 .sidebar {
-    position: sticky;
-    top: 82px;
+    /* position: fixed; */
+    /* position: fixed;
+    top: 82px; */
     /* border-left: 1px solid gray; */
-    /* width: 80%; */
+    width: 100%;
     direction: ltr;
     padding-left: 10px;
-    height: 90vh;
+    height: 79vh;
     overflow-y: scroll;
     margin-right: 10px;
 }
@@ -98,8 +99,15 @@
     text-decoration: none;
 }
 
-@media only screen and (max-width: 420px) {
+/* @media only screen and (max-width: 420px) {
     .sidebar {
         width: 100%;
     }
 }
+
+@media only screen and (min-width: 750px) {
+    .sidebar {
+        opacity: 1;
+    }
+}
+ */

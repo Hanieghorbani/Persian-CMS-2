@@ -14,6 +14,8 @@ import { Accordion } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import CmsContext from "../../contexts/cmsContext"
 import { useContext } from "react"
+import { useRef } from "react"
+import { useEffect } from "react"
 export default function Sidebar() {
   const contextData = useContext(CmsContext)
   function changeIsShowMenu(e){
@@ -21,8 +23,10 @@ export default function Sidebar() {
       contextData.setShowMenuBar(false)
     }
   }
+
+
   return (
-    <div className={`sidebar ${contextData.showMenuBar ? 'd-block' : 'd-none'}`}>
+    <div className={`sidebar`}>
       <Accordion defaultActiveKey="0" onClick={e=>changeIsShowMenu(e)}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
@@ -176,7 +180,7 @@ export default function Sidebar() {
             </ul>
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="8">
+        <Accordion.Item eventKey="9">
           <Accordion.Header>
             <StorefrontIcon />
             صفحات
@@ -191,7 +195,7 @@ export default function Sidebar() {
             </ul>
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="8">
+        <Accordion.Item eventKey="10">
           <Accordion.Header>
             <StorefrontIcon />
             صفحات
@@ -206,7 +210,7 @@ export default function Sidebar() {
             </ul>
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="8">
+        <Accordion.Item eventKey="11">
           <Accordion.Header>
             <StorefrontIcon />
             صفحات
@@ -221,7 +225,7 @@ export default function Sidebar() {
             </ul>
           </Accordion.Body>
         </Accordion.Item>
-        <Accordion.Item eventKey="8">
+        <Accordion.Item eventKey="12" >
           <Accordion.Header>
             <StorefrontIcon />
             صفحات

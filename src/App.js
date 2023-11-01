@@ -17,13 +17,13 @@ export default function App() {
     >
       <div className="App">
         <TopBar />
-        <div className="d-flex justify-content-between w-100">
-          <div className={`${showMenuBar ? 'w-75' : 'd-none'}`}>
+        <div className="d-flex w-100 containerDiv">
+          <div className={`sidebarDiv ${showMenuBar ? 'showSidebar ' : 'd-none'}`}>
             <Sidebar />
           </div>
-          <div className={` ${showMenuBar ? 'w-25 d-none' : 'w-100'}`}>
-           {routers}
-           </div>
+          <div className={`routersDiv  ${!showMenuBar ? 'w-100' : ''}`}>
+            {routers}
+          </div>
         </div>
       </div>
     </CmsContext.Provider>

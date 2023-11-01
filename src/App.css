@@ -1,4 +1,63 @@
-.App{
+.App {
     direction: rtl;
-    background: #050408;
+    overflow-x: hidden;
+    background: inherit;
+}
+
+.containerDiv{
+    margin-top: 9rem;
+    background: inherit;
+}
+
+.sidebarDiv {
+    background: #060818;
+    padding-bottom: 10rem !important;
+    position: fixed;
+    top: 8.5rem;
+    transform: translateX(300px);
+    transition: all 0.4s ease;
+}
+
+.sidebarDiv.showSidebar {
+    transform: translateX(0px);
+    width: 50%;
+    background: inherit;
+}
+
+.routersDiv {
+    position: absolute;
+    left: 0;
+    background: inherit;
+    transition: all 0.4s ease;
+}
+
+@media only screen and (max-width: 599px) {
+    .sidebarDiv.showSidebar {
+        width: 100%;
+        z-index: 20;
+        top: 7.5rem;
+    }
+    .routersDiv {
+        width: 30%;
+        width: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .sidebarDiv.showSidebar {
+        width: 30%;
+    }
+
+    .routersDiv {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .sidebarDiv.showSidebar {
+        width: 20%;
+    }
+    .routersDiv {
+        width: 80%;
+    }
 }

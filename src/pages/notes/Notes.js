@@ -85,8 +85,8 @@ export default function Notes() {
     setNotes(newListNotes)
   }
   return (
-    <div className="w-100 d-flex ms-3 justify-content-between">
-      <div className="bgMain rounded pt-3 d-flex flex-column w-25">
+    <div className="w-100 d-flex flex-column justify-content-center flex-lg-row overflow-x-hidden">
+      <div className="bgMain rounded pt-3 d-flex flex-column mx-auto mx-lg-0 col-11 col-lg-3 ms-lg-4">
         <div className="d-flex flex-column">
           <button
             className="btn btn-primary mx-auto text-white mb-4"
@@ -150,11 +150,11 @@ export default function Notes() {
           </Modal>
         </div>
       </div>
-      <div className="row notes w-75 mt-3">
+      <div className="row notes w-100 w-lg-75 mt-3 justify-content-center justify-content-lg-start mx-0 mx-lg-auto">
         {status == "همه یادداشت ها" &&
           notes.map((note) => (
-            <div key={note.id} className="col-3">
-              <div className="w-100 rounded bgMain text-white">
+            <div key={note.id} className="col-11 col-lg-3">
+              <div className="w-100 rounded bgMain text-white mb-4">
                 <h6 className="p-4 pb-1">{note.title}</h6>
                 <span className="text-secondary px-4">{note.date}</span>
                 <p className="text-secondary mt-4 px-4">{note.body}</p>
@@ -181,8 +181,8 @@ export default function Notes() {
           notes
             .filter((note) => note.star)
             .map((note) => (
-              <div key={note.id} className="col-3">
-                <div className="w-100 rounded bgMain text-white">
+              <div key={note.id} className="col-11 col-3">
+                <div className="w-100 rounded bgMain text-white  mb-4">
                   <h6 className="p-4 pb-1">{note.title}</h6>
                   <span className="px-4">{note.date}</span>
                   <p className="mt-4 px-4">{note.body}</p>

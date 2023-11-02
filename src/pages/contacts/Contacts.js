@@ -92,9 +92,9 @@ export default function Contacts() {
   }
   return (
     <div className="contacts mt-4 w-100 p-4">
-      <div className="d-flex justify-content-between contactsTop w-100">
+      <div className="d-flex flex-column flex-lg-row justify-content-lg-between contactsTop w-100">
         <SearchBox />
-        <div className="d-flex">
+        <div className="d-flex mx-auto mx-lg-0 mt-4 mt-lg-0">
           <PersonAddIcon
             className="ms-3"
             onClick={() => {
@@ -106,41 +106,42 @@ export default function Contacts() {
           <GridViewOutlinedIcon />
         </div>
       </div>
-      <div className="text-white mt-5">
-        <div className="d-flex justify-content-between bgMain rounded py-2 px-4 align-items-center fw-bold">
-          <p>نام</p>
-          <p>ایمیل</p>
-          <p>آدرس</p>
-          <p>موبایل</p>
-          <p>ادیت</p>
-        </div>
+      <div className=" text-white mt-5">
+        <div className="overflow-x-scroll">
+          <div className="titleContacts d-flex justify-content-between bgMain rounded py-2 px-4 align-items-center fw-bold">
+            <p>نام</p>
+            <p>ایمیل</p>
+            <p>آدرس</p>
+            <p>موبایل</p>
+            <p>ادیت</p>
+          </div>
+          <div>
+            {contacts.map((contact) => (
+              <div className="infoContacts d-flex justify-content-between bgMain my-3 rounded  align-items-center px-4 py-2 ">
+                <div className="d-flex align-items-center">
+                  {/* <img src="/imgs/prof.jpg" className="rounded-circle"/> */}
+                  <div>
+                    <h6>{contact.name}</h6>
+                    <p className="text-secondary">{contact.pos}</p>
+                  </div>
+                </div>
 
-        <div>
-          {contacts.map((contact) => (
-            <div className="infoContacts d-flex justify-content-between bgMain my-3 rounded  align-items-center px-4 py-2">
-              <div className="d-flex align-items-center">
-                {/* <img src="/imgs/prof.jpg" className="rounded-circle"/> */}
-                <div>
-                  <h6>{contact.name}</h6>
-                  <p className="text-secondary">{contact.pos}</p>
+                <p className="text-secondary">{contact.email}</p>
+                <p>{contact.addr}</p>
+                <p className="text-secondary">{contact.phone}</p>
+
+                <div className="d-flex">
+                  <EditRoundedIcon
+                    className="ms-2"
+                    onClick={() => editHand(contact.id)}
+                  />
+                  <PersonRemoveOutlinedIcon
+                    onClick={() => removeUserHandler(contact.id)}
+                  />
                 </div>
               </div>
-
-              <p className="text-secondary">{contact.email}</p>
-              <p>{contact.addr}</p>
-              <p className="text-secondary">{contact.phone}</p>
-
-              <div className="d-flex">
-                <EditRoundedIcon
-                  className="ms-2"
-                  onClick={() => editHand(contact.id)}
-                />
-                <PersonRemoveOutlinedIcon
-                  onClick={() => removeUserHandler(contact.id)}
-                />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 

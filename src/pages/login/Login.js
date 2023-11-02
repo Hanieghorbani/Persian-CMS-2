@@ -78,12 +78,12 @@ export default function Login() {
       <div className="d-flex flex-column justify-content-center align-items-center">
         <p className="text-secondary my-4">یا</p>
 
-        <div>
-          <button className="btn btn-outline-secondary ms-2">
+        <div className="d-flex flex-column flex-lg-row">
+          <button className="btn btn-outline-secondary ms-lg-2">
             <GitHubIcon />
             گیت هاب
           </button>
-          <button className="btn btn-outline-secondary me-2">
+          <button className="btn btn-outline-secondary me-lg-2 mt-4 mt-lg-0">
             <FacebookOutlinedIcon />
             فیسبوک
           </button>

@@ -31,11 +31,23 @@
     transition: all 0.4s ease;
 }
 
+/* @media only screen and (max-width: 400px) {
+    .sidebarDiv.showSidebar {
+        top: 7rem;
+        width: 100%;
+        z-index: 20;
+    }
+    .routersDiv {
+        width: 30%;
+        width: 0;
+    }
+} */
+
 @media only screen and (max-width: 599px) {
     .sidebarDiv.showSidebar {
         width: 100%;
         z-index: 20;
-        top: 7.5rem;
+        top: 8.3rem;
     }
     .routersDiv {
         width: 30%;

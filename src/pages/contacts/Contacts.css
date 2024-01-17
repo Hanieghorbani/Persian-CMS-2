@@ -1,0 +1,52 @@
+.contacts .inputBox{
+  background: #1b2e4b !important;
+  padding: 0 !important;
+}
+
+.contacts .inputBox input{
+    color:  rgb(222, 222, 222);
+}
+
+.contactsInfos{
+    
+}
+
+
+.contactsTop > .d-flex svg{
+    background: #1b2e4b;
+    color: rgb(214, 214, 214);
+    border-radius: 10px;
+    font-size: 47px !important;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.contactsTop > .d-flex svg:hover{
+    color: rgb(89, 142, 89);
+}
+
+.infoContacts img{
+   width: 50px;
+}
+
+.infoContacts p{
+    font-size: 15px;
+}
+
+.infoContacts svg{
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.infoContacts svg:hover{
+    color: rgb(108, 163, 108);
+}
+
+@media only screen and (max-width:590px){
+    .infoContacts,
+    .titleContacts{
+        width: 200%;
+        overflow-x: scroll;
+    }
+}

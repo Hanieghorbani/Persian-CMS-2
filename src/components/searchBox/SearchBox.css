@@ -1,0 +1,20 @@
+.inputBox {
+    border-radius: 10px;
+    background: #0e1726;
+    border-radius: 10px;
+    padding: 0 !important;
+}
+
+.inputBox input {
+    padding: 10px !important;
+}
+
+.inputBox input:focus {
+    border-bottom: none !important;
+    outline: none;
+}
+.inputBox input::placeholder,
+.inputBox input {
+    color: rgb(230, 230, 230);
+    font-size: 20px;
+}

@@ -1,0 +1,86 @@
+.form-container {
+    width: 30%;
+    background-color: #0e1726;
+    margin: auto;
+    box-shadow:
+        0 0 20px 0 rgba(0, 0, 0, 0.2),
+        0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.register-form p {
+    color: gray;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.success-message {
+    font-family: "Roboto", sans-serif;
+    background-color: #3f89f8;
+    padding: 15px;
+    color: white;
+}
+
+.form-field {
+    /* margin: 10px 0 10px 0; */
+    padding: 15px;
+    font-size: 16px;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.form-container span {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: rgb(216, 146, 146);
+    margin-bottom: 15px;
+}
+
+.form-container input {
+    background: #1b2e4b;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.error {
+    border-style: solid;
+    border: 2px solid #ffa4a4;
+}
+
+.form-container button.form-field {
+    background: #0a58cd;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.form-container button:disabled {
+    cursor: default;
+}
+
+.form-container a {
+    color: rgb(74, 173, 97);
+}
+
+@media only screen and (max-width:950px){
+    .form-container{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .form-container{
+        width: 100%;
+    }
+}

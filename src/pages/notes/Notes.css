@@ -1,0 +1,73 @@
+.notes svg{
+    cursor: pointer;
+}
+
+/* .notes .bgMain {
+    background: rgba(226, 160, 63, 0.42);
+} */
+
+.list-unstyled li{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.list-unstyled li:hover{
+    background: #191e3a;
+}
+
+.modal-content{
+    background: #292929 !important;
+}
+
+.modal-content input,
+.modal-content textarea{
+    background: #444444  !important;
+    border: none !important;
+    color: rgb(193, 193, 193) !important;
+
+}
+
+.modal-content input::placeholder,
+.modal-content textarea::placeholder{
+    color: rgb(212, 212, 212) !important;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus{
+    box-shadow: none !important;
+}
+
+.modal-header{
+    border: none !important;
+}
+
+.modal-header button{
+    background-image: none !important;
+    position: relative;
+    background: #444444 !important;
+    margin: 0 !important;
+}
+
+.modal-header button::after,
+.modal-header button::before{
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 3px;
+    width: 25px;
+    height: 3px;
+    background: rgb(212, 212, 212);
+}
+.modal-header button::before{
+   transform: rotate(-45deg);
+}
+.modal-header button::after{
+   transform: rotate(45deg);
+}
+
+.modal-footer{
+    border: none !important;
+
+}

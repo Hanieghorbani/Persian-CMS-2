@@ -1,0 +1,29 @@
+.settingAcc p{
+    color: gray;
+}
+
+.settingAcc input,
+.settingAcc select,
+.settingAcc textarea{
+    border-radius: 10px;
+    padding: 10px;
+    color:rgb(118, 203, 107);
+    outline: none;
+    border: none;
+    background: #1b2e4b;
+    width: 100% !important;
+}
+
+.settingAcc svg{
+    padding: 10px;
+    background: #1b2e4b;
+    color: rgb(58, 186, 124);
+    width: 50px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.saveCha{
+    background: #191e3a;
+}
